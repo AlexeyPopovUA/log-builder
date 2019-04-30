@@ -1,0 +1,31 @@
+{
+  "name": "log-builder",
+  "version": "1.0.0",
+  "description": "Implementation of \"builder\" pattern for advanced-logger",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexeyPopovUA/log-builder.git"
+  },
+  "keywords": [
+    "builder",
+    "adapter",
+    "configuration",
+    "logger",
+    "advanced",
+    "logger",
+    "typescript"
+  ],
+  "author": "O.Popov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlexeyPopovUA/log-builder/issues"
+  },
+  "homepage": "https://github.com/AlexeyPopovUA/log-builder#readme",
+  "peerDependencies": {
+    "advanced-logger": "2.0.4"
+  }
+}
