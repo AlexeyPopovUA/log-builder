@@ -1,0 +1,36 @@
+language: node_js
+node_js: "lts/*"
+cache:
+  directories:
+    - "$HOME/.npm"
+    - "$HOME/travis/.sonar/cache"
+    - "node_modules"
+    - ".scannerwork"
+
+git:
+  depth: 99999
+
+install:
+  - npm ci
+
+#addons:
+#  sonarcloud:
+#    organization: $SONAR_ORGANIZATION
+#    token:
+#      secure: $SONAR_TOKEN
+
+script:
+#  - npm run coverage
+  - npm run test
+  - npm run build
+  - npm run bundlesize
+#  - sonar-scanner
+
+deploy:
+  skip_cleanup: true
+  provider: npm
+  email: $DEPLOY_EMAIL
+  api_key: $NPM_TOKEN
+  on:
+    branch: master
+    tags: true

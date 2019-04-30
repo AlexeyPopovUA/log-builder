@@ -1,0 +1,14 @@
+.idea
+.scannerwork
+__tests__
+src
+node_modules
+coverage
+sonar.sh
+tsconfig.json
+tslint.json
+webpack.*.js
+*.tgz
+.gitignore
+/sonar-project.properties
+/build-scripts/

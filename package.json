@@ -2,9 +2,25 @@
   "name": "log-builder",
   "version": "1.0.0",
   "description": "Implementation of \"builder\" pattern for advanced-logger",
-  "main": "index.js",
+  "main": "main.js",
+  "browser": "main.js",
+  "unpkg": "dist/production/log-builder.min.js",
+  "typings": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --config webpack.config.js --env.modes=prod --env.modes=dev",
+    "build-prod": "webpack --config webpack.config.js --env.modes=prod",
+    "build-dev": "webpack --config webpack.config.js --env.modes=dev",
+    "watch-prod": "webpack --config webpack.config.js --env.watch=1 --env.modes=prod",
+    "watch-dev": "webpack --config webpack.config.js --env.watch=1 --env.modes=dev",
+    "test": "jest",
+    "test:watch": "npm test -- --watch",
+    "coverage": "npm test -- --coverage --no-cache",
+    "coverage:watch": "npm run coverage -- --watch",
+    "release": "standard-version --commit-all",
+    "bundlesize": "bundlesize"
   },
   "repository": {
     "type": "git",
@@ -16,7 +32,6 @@
     "configuration",
     "logger",
     "advanced",
-    "logger",
     "typescript"
   ],
   "author": "O.Popov",
@@ -27,5 +42,27 @@
   "homepage": "https://github.com/AlexeyPopovUA/log-builder#readme",
   "peerDependencies": {
     "advanced-logger": "2.0.4"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@commitlint/cli": "7.5.2",
+    "@commitlint/config-conventional": "7.5.0",
+    "@types/jest": "24.0.12",
+    "@types/node": "10.12.24",
+    "awesome-typescript-loader": "5.2.1",
+    "bundlesize": "0.17.1",
+    "clean-webpack-plugin": "2.0.1",
+    "copy-webpack-plugin": "5.0.3",
+    "husky": "2.1.0",
+    "jest": "24.7.1",
+    "rimraf": "2.6.3",
+    "source-map-loader": "0.2.4",
+    "standard-version": "5.0.2",
+    "ts-jest": "24.0.2",
+    "typescript": "3.4.5",
+    "webpack": "4.30.0",
+    "webpack-bundle-analyzer": "3.3.2",
+    "webpack-cli": "3.3.1",
+    "webpack-node-externals": "^1.7.2"
   }
 }
