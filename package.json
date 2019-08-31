@@ -59,7 +59,7 @@
     "source-map-loader": "0.2.4",
     "standard-version": "7.0.0",
     "ts-jest": "24.0.2",
-    "typescript": "3.5.3",
+    "typescript": "3.6.2",
     "webpack": "4.39.2",
     "webpack-bundle-analyzer": "3.4.1",
     "webpack-cli": "3.3.7",
