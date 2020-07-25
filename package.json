@@ -47,7 +47,7 @@
   "devDependencies": {
     "@commitlint/cli": "9.1.1",
     "@commitlint/config-conventional": "9.1.1",
-    "@types/jest": "26.0.5",
+    "@types/jest": "26.0.7",
     "@types/node": "10.12.24",
     "awesome-typescript-loader": "5.2.1",
     "bundlesize": "0.18.0",
